@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Malabardesign_Module>
+            <version>1.0.0.0</version>
+        </Malabardesign_Module>
+    </modules>
+    <global>
+        <models>
+            <module>
+                <class>Malabardesign_Module_Model</class>
+                <resourceModel>module_resource</resourceModel>
+               
+            </module>
+             <module_resource>
+             	<class>Malabardesign_Module_Model_Resource</class>
+             	<entities>
+             		<module>
+             			<table>module</table>
+             		</module>
+             		<tbmodule>
+             			<table>tbmodule</table>
+             		</tbmodule>
+             	</entities>
+             </module_resource>
+        </models>
+        <resources>
+        	<module_setup>
+        		<setup>
+        			<module>Malabardesign_Module</module>
+        			<class>Malabardesign_Module_Model_Resource_Setup</class>
+        		</setup>
+        	</module_setup>
+        </resources>
+        <helpers>
+            <module>
+                <class>Malabardesign_Module_Helper</class>
+            </module>
+        </helpers>
+        <blocks>
+            <module>
+            	<class>Malabardesign_Module_Block</class>
+            </module>
+        </blocks>
+       
+    </global>
+    <frontend>
+        <routers>
+            <module>
+                <use>standard</use>
+                <args>
+                    <module>Malabardesign_Module</module>
+                    <frontName>module</frontName>
+                </args>
+            </module>
+        </routers>
+        <layout>
+            <updates>
+                <module>
+                    <file>module.xml</file>
+                </module>
+            </updates>
+        </layout>
+    </frontend>
+    
+</config>
